@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .form-control {
+            border-radius: 0.5rem;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Article Generator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Generate an Article</h1>
+            <i class="fas fa-pencil-alt fa-3x"></i>
+        </div>
+        <form action="/generate" method="post">
+            <div class="form-group">
+                <label for="target_keyword">Target Keyword:</label>
+                <input type="text" class="form-control" id="target_keyword" name="target_keyword" required>
+            </div>
+            <div class="form-group">
+                <label for="article_length">Article Length:</label>
+                <select class="form-control" id="article_length" name="article_length" required>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tone_of_voice">Tone of Voice:</label>
+                <select class="form-control" id="tone_of_voice" name="tone_of_voice" required>
+                    <option value="formal">Formal</option>
+                    <option value="informal">Informal</option>
+                    <option value="friendly">Friendly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <input type="text" class="form-control" id="language" name="language" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Generate Article</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

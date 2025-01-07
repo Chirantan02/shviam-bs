@@ -1,0 +1,36 @@
+# Directories to ignore
+fooocus/
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+*.pem
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache
+.cache/
+.npm/
+
+# Coverage
+coverage/
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+
+
